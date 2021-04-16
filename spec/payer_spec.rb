@@ -11,10 +11,6 @@ describe Player do
   it 'has base hp' do
     expect(charlotte.hp).to eq Player::BASEHP
   end
-  it 'attacks the player ' do
-    expect(mittens).to receive(:receive_damage)
-    charlotte.attack(mittens)
-  end
 
   it 'reduces the player hit points' do
     expect {charlotte.receive_damage}.to change {charlotte.hp}.by(-10)
